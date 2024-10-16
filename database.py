@@ -8,8 +8,7 @@ load_dotenv()
 
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 DEBUG = os.getenv("DEBUG") == "True"  # Convert string to boolean
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(',')
-
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(',')
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
