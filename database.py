@@ -10,7 +10,6 @@ SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 DEBUG = os.getenv("DEBUG") == "True"  # Convert string to boolean
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(',')
 
-# SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:admin@localhost:5432/todo_app'
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
